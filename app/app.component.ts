@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'my-app',
     template: `
-    <div> <a [routerLink]="['/']">Home</a> | <a [routerLink]="['/contact']">contact us</a> </div>
+ <a [routerLink]="['/']">Home</a> |  <a [routerLink]="['/empl']">worker list</a>  | <a [routerLink]="['/contact']">contact us</a><br>
         <router-outlet></router-outlet>
     `
 })
