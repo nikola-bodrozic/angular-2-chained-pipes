@@ -11,8 +11,7 @@ export class EmplListComponent {
      employees: IEmployee[];
      constructor(private _emplService: EmplService){}
 
-     ngOnInit() { 
-        console.log('on init');
-        this._emplService.getProducts().subscribe( employees => this.employees = employees  );
+    ngOnInit() { 
+        this._emplService.getWorkers().subscribe( employees => this.employees = employees  );
     }    
 }

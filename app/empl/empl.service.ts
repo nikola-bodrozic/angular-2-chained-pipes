@@ -11,7 +11,7 @@ export class EmplService {
     
     constructor (private _http: Http ){ }
 
-    getProducts(): Observable<IEmployee[]>  {
+    getWorkers(): Observable<IEmployee[]>  {
         return this._http.get(this._emplUrl).map((response: Response) => <IEmployee[]> response.json())
     }
 }

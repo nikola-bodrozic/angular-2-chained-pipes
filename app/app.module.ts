@@ -8,6 +8,7 @@ import { AppComponent }  from './app.component';
 import { AboutUsComponent }  from './aboutus/about-us.component';
 import { ContactUsComponent }  from './contactus/contact-us.component';
 import { EmplListComponent }  from './empl/empl-list.component';
+import { NameFilterPipe } from './empl/name-filter.pipe';
 
 @NgModule({
   imports: [ BrowserModule, RouterModule.forRoot([
@@ -15,7 +16,7 @@ import { EmplListComponent }  from './empl/empl-list.component';
       {path: 'empl', component:EmplListComponent}, 
       {path: 'contact', component:ContactUsComponent}     
   ]), FormsModule, HttpModule ],
-  declarations: [ AppComponent, AboutUsComponent, ContactUsComponent, EmplListComponent ],
+  declarations: [ AppComponent, AboutUsComponent, ContactUsComponent, EmplListComponent, NameFilterPipe ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
