@@ -1,5 +1,5 @@
        
-       <div> <input type="text" [(ngModel)]="termName"> </div>
+       <div> <input type="text" [(ngModel)]="termName"> <input type="text" [(ngModel)]="termCompany"></div>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -8,7 +8,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor='let employee of employees | nameFilter:termName'>
+                    <tr *ngFor='let employee of employees | nameFilter:termName | companyFilter:termCompany'>
                         <td>{{ employee.name}}</td>
                         <td>{{ employee.company }}</td>
                     </tr>

@@ -7,7 +7,8 @@ import { IEmployee } from './empl';
 
 export class NameFilterPipe implements PipeTransform {
      transform(value: IEmployee[], filterBy: string): IEmployee[] {
-        filterBy = filterBy ? filterBy.toLocaleLowerCase() : null;
-        return filterBy ? value.filter((product: IEmployee) => product.name.toLocaleLowerCase().indexOf(filterBy) !== -1) : value;
+        filterBy = filterBy ? filterBy.toLowerCase() : null;
+        //return filterBy ? value.filter((empl: IEmployee) => empl.name.toLowerCase().indexOf(filterBy) !== -1) : value;
+        return filterBy ? value.filter((empl: IEmployee) => empl.name.toLowerCase().startsWith(filterBy) == true) : value;
     }
 }
