@@ -1,5 +1,5 @@
        
-       <div> <input type="text" [(ngModel)]="termName"> <input type="text" [(ngModel)]="termCompany"></div>
+       <h3>Two chained pipes</h3>
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -8,6 +8,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><input type="text" [(ngModel)]="termName" placeholder="filter by name"></td>
+                        <td><input type="text" [(ngModel)]="termCompany" placeholder="filter by complany"></td>
+                    </tr>                    
                     <tr *ngFor='let employee of employees | nameFilter:termName | companyFilter:termCompany'>
                         <td>{{ employee.name}}</td>
                         <td>{{ employee.company }}</td>
