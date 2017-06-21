@@ -3,3 +3,4 @@
   - in project root run `npm install` to install dependancies
   - `npm start` to run lite server, browser will open automatically
   - in text input elements type name and company the table gets filtered on key press
+  - see files in  angular-2-chained-pipes/app/empl/ directory for details
