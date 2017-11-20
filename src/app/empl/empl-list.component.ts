@@ -20,7 +20,7 @@ import { EmplService} from './empl.service';
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor='let employee of employees | nameFilter:termName | companyFilter:termCompany | async'>
+            <tr *ngFor='let employee of employees | nameFilter:termName | companyFilter:termCompany'>
                 <td>{{ employee.name}}</td>
                 <td>{{ employee.company }}</td>
             </tr>
